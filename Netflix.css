@@ -5,24 +5,31 @@ body {
   padding: 0;
 }
 .container0 {
-    position: relative;
-    display: inline-block; /* or block, depending on your layout */
-  }
-  
-.image {
+  position: relative;
+  display: inline-block; /* or block, depending on your layout */
+  height: 90vh;
   width: 100%;
-  height: auto;
+  overflow: hidden;
+}
+
+.image {
+  height: 100%;
+  width: 100%;
   object-fit: cover;
 }
 .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-    opacity: 0.7; /* adjust the opacity to your desired level */
-  }
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.5),
+    rgba(0, 0, 0, 0.8)
+  );
+  opacity: 0.7; /* adjust the opacity to your desired level */
+}
 .container1 {
   width: 100%;
   height: auto;
@@ -47,43 +54,136 @@ body {
   width: 100%;
   height: auto;
   background-color: black;
+  padding-bottom: 2%;
 }
-.container6 {
-  width: 100%;
-  height: auto;
+.heading {
   background-color: black;
-  padding-bottom: 10rem;
+  color: white;
+  font-size: 25px;
+  text-align: center;
+  padding-top: 3%;
 }
-.questionsDiv{
-    background-color: #000000;
-    /* border: 1px solid #131313; */
-    color: white; 
-    padding-left: 20%;
-    padding-top: 3%;
+.content {
+  margin: 30px auto;
+  width: 100%;
+  max-width: 750px;
+}
+.content li {
+  list-style: none;
+  width: 100%;
+  padding: 5px;
+}
+.content li label {
+  display: flex;
+  align-items: center;
+  padding: 30px;
+  font-size: 24px;
+  font-weight: 100;
+  background: #303030;
+  margin-bottom: 2px;
+  color: white;
+  cursor: pointer;
+  position: relative;
+}
+.container5 ul li input[type="radio"] + label::after {
+  content: "+";
+  font-size: 34px;
+  position: absolute;
+  right: 20px;
+  transition: transform 0.5s;
+}
+input[type="radio"] {
+  display: none;
+}
+.content .answer {
+  color: white;
+  font-size: 22px;
+  background: #303030;
+  padding: 0 20px;
+  text-align: left;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s, padding 0.5s;
+}
+.content input[type="radio"]:checked + label + .answer {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+.content input[type="radio"]:checked + label::after {
+  transform: rotate(135deg);
+}
+.line{
+  font-size: 15px;
+  text-align: center;
+  color: #fff;
+}
+.email-signup{
+  background: white;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  overflow: hidden ;
+  max-width: 600px;
+  margin: 20px auto 60px;
+}
+.email-signup input{
+  flex: 1;
+  border: 0;
+  outline: 0;
+  margin-left: 20px;
+}
+.email-signup button{
+  background: #db0001;
+  border: 0;
+  outline: 0;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 30px;
+}
+
+
+
+.container6 {
+  background-color: black;
+  padding-bottom: 1rem;
+}
+
+.inner-container-6 {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.questionsDiv {
+  background-color: #000000;
+  /* border: 1px solid #131313; */
+  color: #c5c5c5;
+  padding-top: 3%;
 }
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 10px;
-  padding: 10px;
+  padding:1 0px 0px;
   background-color: #000000;
   /* border: 1px solid #131313; */
   text-align: center;
-  width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  font-size: smaller;
+  color: red;
 }
 
 .grid-container div {
   background-color: #000000;
-  padding: 10px;
+  padding: 10px 0px;
   /* border: 1px solid #ddd; */
-  text-align: center;
+  text-align: left;
 }
 
 .grid-container a {
   /* text-decoration: none; */
-  color: #dde7f0;
+  color: #c5c5c5;
 }
 
 .grid-container a:hover {
@@ -95,31 +195,32 @@ body {
   padding: 10px;
   /* border: 1px solid #ccc; */
   /* border-radius: 1px; */
-  width: 200px; /* adjust the width to your desired value */
-  padding: 6px;
-  margin-left: 20%;
+  /* display: inline-block; */
+  width: 200px;
+  padding: 6px 0px;
   padding-top: auto;
   height: 2rem;
   border-radius: 6px;
-  position: relative;
-  color: white;
+  /* position: relative; */
+  color: #c5c5c5;
   background-color: #141313;
+  margin-bottom: 1%;
+  margin-top: 1%;
 }
 
 .dropdown label {
-    background-color: #141313;
-    width: 10%;
-    float: left;
-    display: flex;
-    height: 100%;
-    justify-content: center;
-    align-items: center;
-    margin-left: 10px;
+  background-color: #141313;
+  width: 10%;
+  float: left;
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
 }
 
 .dropdown select {
   /* Style the select element */
-  width: auto;
   height: 100%;
   padding-left: 10px;
   padding-right: 40px;
@@ -155,3 +256,8 @@ body {
   color: #333;
 }
 
+.trademark {
+  background-color: #000000;
+  /* border: 1px solid #131313; */
+  color: #c5c5c5;
+}
