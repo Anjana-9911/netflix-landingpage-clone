@@ -28,7 +28,68 @@ body {
     rgba(0, 0, 0, 0.5),
     rgba(0, 0, 0, 0.8)
   );
-  opacity: 0.7; /* adjust the opacity to your desired level */
+  opacity: 0.7;
+}
+
+ .navbar {
+  position: absolute;
+  display: flex;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  justify-content: space-between;
+  padding-left: 10.5rem;
+  padding-right: 10.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+ }
+.logo{
+  width: 150px;
+}
+.logo svg {
+  color: rgb(229, 9, 20);
+  fill: rgb(229, 9, 20);
+}
+.navbar-buttons{
+  margin-left: auto;
+  display: flex;
+}
+.navbar-buttons .buttons {
+  width: 10rem;
+  border-radius: 0.5rem;
+}
+.navbar-buttons .dropdown {
+  
+  border: 1px solid white;
+}
+.sign-in {
+  margin-left: 1rem;
+  margin-right: 20.5rem;
+  font-size: 16px;
+  margin-top: 0.4rem;
+  margin-bottom: 0.4rem;
+  background-color: #e50914;
+  color: white;
+  
+  border: 1px solid #b50710;
+}
+
+.header-text {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  z-index: 20;
+  text-align: center;
+  margin-top: 100px;
+}
+.header-text h1{
+  font-size: 40px;
+  font-weight: 600;
+}
+.header-text p{
+  font-size: 16px;
 }
 .container1 {
   width: 100%;
