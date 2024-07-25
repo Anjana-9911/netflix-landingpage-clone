@@ -95,7 +95,28 @@ body {
   width: 100%;
   height: auto;
   background-color: black;
+  padding-bottom: 70px;
+  padding-top: 60px;
 }
+.parent{
+  position: relative;
+}
+.parent .kids{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  
+}
+.parent .over{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+ 
+}
+
 .container2 {
   width: 100%;
   height: auto;
@@ -106,19 +127,56 @@ body {
   height: auto;
   background-color: black;
 }
+.container3 .row{
+  padding-bottom: 80px;
+  padding-top: 80px;
+}
+.parents {
+  position: relative;
+  width: 400px; 
+  height: 400px;
+  padding-left: 60px;
+  padding-top: 40px;
+}
+
+.kid {
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  padding-left: 40px;
+  padding-top: 40px;
+}
+
+.overla {
+  position: absolute;
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  object-fit: cover;
+  padding-left: 40px;
+  padding-top: 20px;
+ 
+  
+}
+
 .container4 {
   width: 100%;
   height: auto;
   background-color: black;
   padding-top: 3%;
-  padding-bottom: 3%;
+  /* padding-bottom: 3%; */
+} 
+.container4 .row{
+  padding-bottom: 30px;
+  padding-top: 40px;
 }
 .row{
   display: flex;
   width: 100%;
   align-items: center;
   flex-wrap: wrap;
-  padding: 20px 0;
+  padding: 50px 0;
   
 }
 .kids{
@@ -127,7 +185,7 @@ body {
 }
 .kids img{
   display: block;
-  width: 90%;
+  width: 50%;
   margin: auto;
 }
 .kids-section{
